@@ -30,7 +30,13 @@
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-in-out;
 }
-
+.anime .info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 20%;
+}
 .anime .info h2 {
   font-weight: bold;
   font-size: 28px;
