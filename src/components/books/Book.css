@@ -1,0 +1,92 @@
+.anime {
+  width: 330px;
+  height: 70vh;
+  margin: 30px;
+  padding: 1rem;
+  background-color: #111;
+  color: #fff;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #00b0ff;
+  animation-name: slideTop;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+  animation-timing-function: ease-in-out;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+.anime:hover .poster img {
+  transform: scale(1.1);
+}
+.anime .poster {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.anime .poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.anime .info h2 {
+  font-weight: bold;
+  font-size: 28px;
+  margin-top: 10px;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+  color: #cee7ec;
+}
+
+.anime .info .my-btn {
+  width: 30%;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #cee7ec;
+  background-color: #00b0ff;
+  border: 2px solid #00b0ff;
+  padding: 5px 15px;
+  margin: 5% 0;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+}
+
+.anime .info .my-btn:hover {
+  letter-spacing: 1.5px;
+  color: #0c0032;
+  background-color: transparent;
+  border: 2px solid #00b0ff;
+  box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);
+}
+.anime .info .my-btn a {
+  color: #cee7ec;
+  text-decoration: none;
+}
+.anime .info .my-btn:hover a {
+  color: #00b0ff;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 375px) {
+  .anime {
+    margin: 51px 10px;
+  }
+  .anime .info h2 {
+    font-size: 20px;
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    opacity: 0;
+    transform: translate(0, 100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

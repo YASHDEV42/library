@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import {Route, Switch, Redirect} from 'react-router-dom'
+import Home from './view/Home'
+import Header from './components/blog/Header'
+import BooksList from './components/books/BooksList';
+import { BooksProvider } from './context/BooksContext'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = () => {
+  
+
+    return (
+      <>
+      <Header />
+      <BooksProvider>
+      <Switch>
+      <Route path='/' exact component={Home} />
+      <Route path='/bookslist'  component={BooksList} />
+      <Redirect from="/home" to="/" />
+      </Switch>
+      </BooksProvider>
+      </>
+        /*<AnimeList /><Home />*/
+    );
+  
 }
 
 export default App;
